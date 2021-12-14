@@ -44,21 +44,3 @@ print(rand_city)
 # random sample from a list
 rand_city = random.sample(cities, 2)
 print(rand_city)
-
-# random seed
-random.seed(1)
-rand_state = random.getstate()
-
-rand_int = random.randint(1, 10)
-print(f"The first random integer is {rand_int}")
-
-rand_int = random.randint(1, 10)
-print(f"The second random integer is {rand_int}")
-
-random.setstate(rand_state)
-rand_int = random.randint(1, 10)
-print(f"The random integer after restoring state is {rand_int}")
-
-random.seed(1)
-rand_int = random.randint(1, 10)
-print(f"The random integer after setting the same seed is {rand_int}")
