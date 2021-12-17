@@ -22,12 +22,12 @@ for score in scores_list:
 print()
 
 # continue
-even_list = []
+odd_list = []
 for i in range(1, 10):
     if i % 2 == 0:
         continue
-    even_list.append(i)
-print(even_list)
+    odd_list.append(i)
+print(odd_list)
 
 print()
 
@@ -36,9 +36,9 @@ scores_list = []
 scores_list = [random.randint(0, 100) for _ in range(10)]
 print(scores_list)
 
-even_list = []
-even_list = [i for i in range(1, 10) if i % 2 == 1]
-print(even_list)
+odd_list = []
+odd_list = [i for i in range(1, 10) if i % 2 == 1]
+print(odd_list)
 
 add_to_10 = []
 add_to_10 = [[i, j] for i in range(1, 10) for j in range(1, 10) if i + j == 10]
