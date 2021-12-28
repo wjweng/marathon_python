@@ -10,7 +10,7 @@ cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10] * 4
 # remove the card when it is drawn
 def deal_card():
     card = random.choice(cards)
-    cards.pop(card)
+    cards.remove(card)
     return card
 
 # create a function to calculate total points of the cards
