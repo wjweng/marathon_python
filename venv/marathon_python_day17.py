@@ -5,7 +5,7 @@ def print_global_message():
     print("In function:", global_message)
 
 print_global_message()
-print("In main", global_message)
+print("In main:", global_message)
 
 # modify global message in function
 def modify_global_message():
@@ -37,7 +37,7 @@ def print_local_message():
         local_message = "Modify local message."
         print("Inner function:", local_message)
     modify_outer_message()
-    print("Inner function:", local_message)
+    print("Outer function:", local_message)
 
 print_local_message()
 
@@ -48,7 +48,7 @@ def print_local_message():
         local_message = "Modify local message."
         print("Inner function:", local_message)
     modify_outer_message()
-    print("Inner function:", local_message)
+    print("Outer function:", local_message)
 
 print_local_message()
 
