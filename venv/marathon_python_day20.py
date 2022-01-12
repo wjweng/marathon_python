@@ -60,24 +60,25 @@ class TestGenerator:
     def get_score(self):
         return self.score
 
-# create a test pool
-test_pool = []
-for fact in fact_data:
-    fact_obj = CreateTestPool(fact["question"], fact["answer"])
-    test_pool.append(fact_obj)
+if __name__ == "__main__":
+    # create a test pool
+    test_pool = []
+    for fact in fact_data:
+        fact_obj = CreateTestPool(fact["question"], fact["answer"])
+        test_pool.append(fact_obj)
 
-# do fact test
-fact_test = TestGenerator(test_pool)
+    # do fact test
+    fact_test = TestGenerator(test_pool)
 
-while fact_test.is_last_questions():
-    fact_test.generate_next_question()
+    while fact_test.is_last_questions():
+        fact_test.generate_next_question()
 
-# comments
-print(f"你的總分: {fact_test.score}/{fact_test.question_number}.")
+    # comments
+    print(f"你的總分: {fact_test.score}/{fact_test.question_number}.")
 
-if fact_test.get_score() > 4:
-    print("恭喜你答得比黑猩猩好！")
-elif fact_test.get_score() == 4:
-    print("黑猩猩4ni?")
-else:
-    print("趕快買本書來看吧！")
+    if fact_test.get_score() > 4:
+        print("恭喜你答得比黑猩猩好！")
+    elif fact_test.get_score() == 4:
+        print("黑猩猩4ni?")
+    else:
+        print("趕快買本書來看吧！")
