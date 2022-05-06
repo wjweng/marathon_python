@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 
 window = Tk()
 window.title("Hello World!")
@@ -73,10 +74,24 @@ checkbutton2.pack()
 #     print(listbox.get(listbox.curselection()))
 
 listbox = Listbox(width=15, height=4, selectmode=EXTENDED)
-fruit = ["Option1", "Option2", "Option3", "Option4"]
-for item in fruit:
-    listbox.insert(fruit.index(item), item)
+options = ["Option1", "Option2", "Option3", "Option4"]
+for item in options:
+    listbox.insert(options.index(item), item)
 # listbox.bind("<<ListboxSelect>>", listbox_used)
 listbox.pack()
+
+# menu
+menu = Menu()
+window.config(menu=menu)
+
+submenu1 = Menu(activebackground="green", activeborderwidth=10, borderwidth=20)
+menu.add_cascade(label="menu1", menu=submenu1)
+
+submenu1.add_command(label="label1")
+submenu1.add_separator()
+submenu1.add_command(label="label2")
+
+submenu2 = Menu()
+menu.add_cascade(label="menu2", menu=submenu2)
 
 window.mainloop()
